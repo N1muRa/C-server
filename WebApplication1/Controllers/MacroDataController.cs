@@ -27,7 +27,7 @@ namespace WebApplication1.Controllers
                 {
                     if (reader.HasRows)
                     {
-                        MacroData data = new MacroData { id = reader.GetInt32(0), indexCode = reader.GetString(1), indexName = reader.GetString(2), tradeName = reader.GetString(3), imformationSource = reader.GetString(4), unit = reader.GetString(5), indexData = reader.GetDouble(6), frequency = reader.GetString(7), relaseDate = reader.GetDateTime(8) };
+                        MacroData data = new MacroData { id = reader.GetInt32(0), indexCode = reader.GetString(1), indexName = reader.GetString(2), tradeName = reader.GetString(3), informationSource = reader.GetString(4), unit = reader.GetString(5), indexData = reader.GetDouble(6), frequency = reader.GetString(7), relaseDate = reader.GetDateTime(8) };
                         listData.Add(data);
                     }
                 }

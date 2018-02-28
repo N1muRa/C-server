@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using System.Net.Http.Formatting;
+using System.Web;
 
 namespace WebApplication1
 {
@@ -11,6 +12,7 @@ namespace WebApplication1
         public static void Register(HttpConfiguration config)
         {
             // Web API 配置和服务
+            //HttpContext.Current.Response.AddHeader("Access-Control-Allow-Origin", "*");
 
             // Web API 路由
             config.MapHttpAttributeRoutes();

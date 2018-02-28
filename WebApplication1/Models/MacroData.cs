@@ -11,7 +11,7 @@ namespace WebApplication1.Models
         public string indexCode { get; set; }
         public string indexName { get; set; }
         public string tradeName { get; set; }
-        public string imformationSource { get; set; }
+        public string informationSource { get; set; }
         public string unit { get; set; }
         public double indexData { get; set; }
         public string frequency { get; set; }
