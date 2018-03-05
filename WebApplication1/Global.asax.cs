@@ -19,5 +19,16 @@ namespace WebApplication1
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_BeginRequest(object sender, EventArgs e)
+        {
+            HttpApplication application = sender as HttpApplication;
+            HttpContext context = application.Context;
+            if (context.Request.HttpMethod.ToUpper() == "OPTIONS")
+            {
+                context.Response.StatusCode = 200;
+                context.Response.End();
+            }
+        }
     }
 }
